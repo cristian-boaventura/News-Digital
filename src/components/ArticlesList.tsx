@@ -1,3 +1,4 @@
+import { Article } from "@/models";
 import { RootState } from "@/store";
 import { getTopHeadlines } from "@/utils";
 import { useEffect, useState } from "react";
@@ -5,7 +6,7 @@ import { useSelector } from "react-redux";
 import { ArticleCard } from "./";
 
 const ArticlesList = ({ category }: { category: string }) => {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState<Article[]>([]);
   const country = useSelector((state: RootState) => state.country);
   const [isError, setIsError] = useState(false);
 
@@ -34,7 +35,9 @@ const ArticlesList = ({ category }: { category: string }) => {
       {isError ? (
         <p>Sorry, an unexpected error has occurred.</p>
       ) : (
-        articles.map((article, i) => <ArticleCard key={i} article={article} />)
+        articles.map((article) => (
+          <ArticleCard key={article.url} article={article} />
+        ))
       )}
     </div>
   );
