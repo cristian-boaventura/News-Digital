@@ -28,7 +28,7 @@ const ArticlesList = ({ category }: { category: string }) => {
 
   return (
     <div className="xl mx-4 mt-4 grid max-w-6xl gap-y-4 gap-x-4 sm:mx-8 md:mx-16 lg:grid-cols-2 xl:mx-auto">
-      <h2 className="col-span-full text-xl font-medium ">
+      <h2 className="col-span-full text-xl font-medium " data-test="heading">
         {country.name} {category === "general" ? "Top" : categoryUppercase}{" "}
         Headlines
       </h2>

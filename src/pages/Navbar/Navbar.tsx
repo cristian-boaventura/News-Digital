@@ -52,6 +52,7 @@ const Navbar = () => {
             <label
               htmlFor="my-drawer-3"
               className="btn-ghost btn place-content-center p-3 "
+              data-test="menu-btn"
             >
               <MenuIcon />
             </label>

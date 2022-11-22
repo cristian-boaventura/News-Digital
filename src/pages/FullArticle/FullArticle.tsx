@@ -21,7 +21,9 @@ const FullArticle = () => {
               </div>
               <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                 <div className="px-6 py-12 md:px-12">
-                  <h2 className="mb-4 text-2xl font-bold">{title}</h2>
+                  <h2 className="mb-4 text-2xl font-bold" data-test="art-title">
+                    {title}
+                  </h2>
                   <p className="mb-6 flex items-center font-bold uppercase text-red-600">
                     {source.name}
                   </p>
